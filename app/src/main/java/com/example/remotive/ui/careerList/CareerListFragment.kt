@@ -34,7 +34,7 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list) {
 
     private var _binding: FragmentCareerListBinding? = null
     private val binding get() = _binding!!
-    val adapter = RemotiveAdapter()
+    private val adapter = RemotiveAdapter()
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

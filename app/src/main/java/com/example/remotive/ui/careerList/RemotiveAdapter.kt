@@ -20,6 +20,9 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.example.remotive.R
 import com.example.remotive.databinding.CareerItemBinding
 import com.example.remotive.models.entities.Career
 import com.example.remotive.utils.DiffUtilCallBack
@@ -35,14 +38,15 @@ class RemotiveAdapter
         fun bind(career: Career) {
             binding.apply {
                 textViewJobTitle.text = career.title
-                textViewCompany.text = career.title
+                textViewCompany.text = career.companyName
 
-              /*  //Loading the company logo
-                 Glide.with(itemView)
-                      .load(career.companyLogoUrl)
-                      .centerCrop()
-                      .transition(DrawableTransitionOptions.withCrossFade())
-                      .into(imageViewLogo)*/
+               //Loading the company logo
+                Glide.with(itemView)
+                    .load(career.companyLogoUrl)
+                    .centerCrop()
+                    .error(R.drawable.logo)
+                    .transition(DrawableTransitionOptions.withCrossFade())
+                    .into(imageViewCompanyLogo)
 
             }
         }
