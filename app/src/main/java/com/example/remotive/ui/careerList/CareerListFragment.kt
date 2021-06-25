@@ -21,6 +21,7 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.RecyclerView
 import com.example.remotive.R
 import com.example.remotive.databinding.FragmentCareerListBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -47,6 +48,8 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list) {
             recyclerView.setHasFixedSize(true)
             recyclerView.itemAnimator = null
             recyclerView.adapter = adapter
+            adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+
         }
 
         fetchPosts()
@@ -60,5 +63,7 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list) {
             }
         }
     }
+
+
 
 }

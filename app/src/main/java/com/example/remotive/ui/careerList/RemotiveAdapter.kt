@@ -18,6 +18,7 @@ package com.example.remotive.ui.careerList
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageView
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -35,12 +36,19 @@ class RemotiveAdapter
     class ViewHolder(private val binding: CareerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        init {
+            val bookmarkButton = itemView.findViewById<ImageView>(R.id.bookmark_icon)
+            bookmarkButton.setOnClickListener {
+                bookmarkButton.isSelected = !bookmarkButton.isSelected
+            }
+        }
+
         fun bind(career: Career) {
             binding.apply {
                 textViewJobTitle.text = career.title
                 textViewCompany.text = career.companyName
 
-               //Loading the company logo
+                //Loading the company logo
                 Glide.with(itemView)
                     .load(career.companyLogoUrl)
                     .centerCrop()

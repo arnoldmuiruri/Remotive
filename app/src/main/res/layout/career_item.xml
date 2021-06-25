@@ -77,8 +77,10 @@
 
         <ImageView
             android:id="@+id/bookmark_icon"
+            style="@style/Widget.AppCompat.ActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="12dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="16dp"
@@ -86,7 +88,7 @@
             android:clickable="true"
             android:contentDescription="@string/bookmark_this_job"
             android:focusable="true"
-            android:src="@drawable/ic_baseline_bookmark_border_24"
+            android:src="@drawable/bookmarks_selector"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>

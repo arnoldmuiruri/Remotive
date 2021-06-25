@@ -45,6 +45,8 @@ ext{
     coroutinesVersion = '1.5.0'
     glideVersion = '4.12.0'
     fragmentVersion = "1.3.5"
+    mockitoVersion = "3.3.3"
+    robolectricVersion = "1.3.0"
 }
 
 
