@@ -24,5 +24,21 @@
         android:id="@+id/careerListFragment"
         android:name="com.example.remotive.ui.careerList.CareerListFragment"
         android:label="fragment_career_list"
-        tools:layout="@layout/fragment_career_list" />
+        tools:layout="@layout/fragment_career_list" >
+        <action
+            android:id="@+id/action_careerListFragment_to_careerDetails"
+            app:destination="@id/careerDetails"
+            app:enterAnim="@android:anim/bounce_interpolator"
+            app:exitAnim="@android:anim/bounce_interpolator"
+            app:popEnterAnim="@android:anim/accelerate_decelerate_interpolator"
+            app:popExitAnim="@android:anim/accelerate_decelerate_interpolator" />
+    </fragment>
+    <fragment
+        android:id="@+id/careerDetails"
+        android:name="com.example.remotive.ui.careerDetails.CareerDetails"
+        android:label="fragment_career_details"
+        tools:layout="@layout/fragment_career_details" >
+        <argument android:name="career"
+            app:argType="com.example.remotive.models.entities.Career"/>
+    </fragment>
 </navigation>

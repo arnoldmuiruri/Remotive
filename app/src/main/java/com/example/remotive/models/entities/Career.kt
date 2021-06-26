@@ -41,6 +41,6 @@ data class Career(
     val jobType: String,
     @field:SerializedName("candidate_required_location")
     val candidateRequiredLocation: String,
-   @field:SerializedName("company_logo_url")
+    @field:SerializedName("company_logo_url")
     val companyLogoUrl: String?
 )

@@ -29,17 +29,31 @@ import com.example.remotive.models.entities.Career
 import com.example.remotive.utils.DiffUtilCallBack
 
 
-class RemotiveAdapter
-    : PagingDataAdapter<Career,
+class RemotiveAdapter(private val listener: OnItemClickListener) : PagingDataAdapter<Career,
         RemotiveAdapter.ViewHolder>(DiffUtilCallBack()) {
 
-    class ViewHolder(private val binding: CareerItemBinding) :
+    inner class ViewHolder(private val binding: CareerItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         init {
+
+            //Todo("Add functionality to this")
             val bookmarkButton = itemView.findViewById<ImageView>(R.id.bookmark_icon)
             bookmarkButton.setOnClickListener {
                 bookmarkButton.isSelected = !bookmarkButton.isSelected
+
+            }
+
+            //RE££""
+            binding.root.setOnClickListener {
+                val position = bindingAdapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    val item = getItem(position)
+                    if(item !=null){
+                        listener.onItemClick(item)
+                    }
+
+                }
             }
         }
 
@@ -76,6 +90,12 @@ class RemotiveAdapter
         )
 
         return ViewHolder(binding)
+    }
+
+
+
+    interface OnItemClickListener{
+        fun onItemClick(career: Career)
     }
 
 

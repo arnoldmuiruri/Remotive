@@ -21,21 +21,23 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.remotive.R
 import com.example.remotive.databinding.FragmentCareerListBinding
+import com.example.remotive.models.entities.Career
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class CareerListFragment : Fragment(R.layout.fragment_career_list) {
+class CareerListFragment : Fragment(R.layout.fragment_career_list),RemotiveAdapter.OnItemClickListener {
 
     private val viewModel by viewModels<CareerListViewModel>()
 
     private var _binding: FragmentCareerListBinding? = null
     private val binding get() = _binding!!
-    private val adapter = RemotiveAdapter()
+    private val adapter = RemotiveAdapter(this)
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -51,9 +53,7 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list) {
             adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
 
         }
-
         fetchPosts()
-
     }
 
     private fun fetchPosts() {
@@ -64,6 +64,9 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list) {
         }
     }
 
+    override fun onItemClick(career: Career) {
+        findNavController().navigate(R.id.action_careerListFragment_to_careerDetails)
+    }
 
 
 }
