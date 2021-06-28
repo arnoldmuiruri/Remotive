@@ -18,7 +18,9 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-parcelize'
     id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -95,13 +97,17 @@ dependencies {
 
     //Glide
     implementation "com.github.bumptech.glide:glide:$glideVersion"
-    annotationProcessor "com.github.bumptech.glide:compiler:$glideVersion"
+    kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+    //Jsoup
+    implementation "org.jsoup:jsoup:$jsoupVersion"
 
     //Robolectric
     testImplementation "androidx.test:core:$robolectricVersion"
 
     //Mockito
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
+
 
 
 

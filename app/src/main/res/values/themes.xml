@@ -30,6 +30,7 @@
 
         <!-- Customize your theme here. -->
         <item name="textAppearanceButton">@style/TextAppearance.Remotive.Button</item>
+        <item name="android:windowContentTransitions">true</item>
 
     </style>
 

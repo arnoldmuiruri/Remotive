@@ -14,20 +14,28 @@
  *
  */
 
-package com.example.remotive.ui.careerList
+package com.example.remotive.models.entities
 
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import androidx.paging.cachedIn
-import com.example.remotive.repository.CareerRepositoryImpl
-import dagger.hilt.android.lifecycle.HiltViewModel
-import javax.inject.Inject
+import androidx.room.TypeConverter
+import java.util.*
 
-@HiltViewModel
-class CareerListViewModel @Inject constructor(careerRepository: CareerRepositoryImpl) :
-    ViewModel() {
+object Converter {
 
+    @TypeConverter
+    @JvmStatic
+    fun fromDate(value: Long?): Date? {
+        return if (value == null) {
+            null
+        } else {
+            Date(value)
+        }
+    }
 
-        val careers =  careerRepository.getCareers().cachedIn(viewModelScope)
+    @TypeConverter
+    @JvmStatic
+    fun toDate(date: Date?): Long? {
+        return date?.time
+    }
+
 
 }

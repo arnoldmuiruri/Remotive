@@ -31,14 +31,14 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class CareerListFragment : Fragment(R.layout.fragment_career_list),RemotiveAdapter.OnItemClickListener {
+class CareerListFragment : Fragment(R.layout.fragment_career_list),
+    RemotiveAdapter.OnItemClickListener {
 
     private val viewModel by viewModels<CareerListViewModel>()
 
     private var _binding: FragmentCareerListBinding? = null
     private val binding get() = _binding!!
     private val adapter = RemotiveAdapter(this)
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -50,7 +50,8 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list),RemotiveAdapt
             recyclerView.setHasFixedSize(true)
             recyclerView.itemAnimator = null
             recyclerView.adapter = adapter
-            adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+            adapter.stateRestorationPolicy =
+                RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
 
         }
         fetchPosts()
@@ -65,7 +66,8 @@ class CareerListFragment : Fragment(R.layout.fragment_career_list),RemotiveAdapt
     }
 
     override fun onItemClick(career: Career) {
-        findNavController().navigate(R.id.action_careerListFragment_to_careerDetails)
+        val action = CareerListFragmentDirections.actionCareerListFragmentToCareerDetails(career)
+        findNavController().navigate(action)
     }
 
 

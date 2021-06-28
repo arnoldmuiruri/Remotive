@@ -18,7 +18,9 @@ package com.example.remotive.databases
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.remotive.models.entities.Career
+import com.example.remotive.models.entities.Converter
 import com.example.remotive.models.entities.RemoteKeys
 
 //Persistence class for the careers and
@@ -30,7 +32,7 @@ import com.example.remotive.models.entities.RemoteKeys
     exportSchema = false
 )
 
-
+@TypeConverters(Converter::class)
 abstract class CareerDatabase: RoomDatabase() {
 
     abstract fun careersDao(): CareersDao

@@ -16,14 +16,16 @@
 
 package com.example.remotive.models.entities
 
+import android.os.Parcelable
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
 /**
  * Persistence data class of remote jobs
  */
-
+@Parcelize
 @Entity(tableName = "careers")
 data class Career(
     @PrimaryKey
@@ -38,9 +40,13 @@ data class Career(
     @field:SerializedName("category")
     val category: String,
     @field:SerializedName("job_type")
-    val jobType: String,
+    val jobType: String?,
     @field:SerializedName("candidate_required_location")
     val candidateRequiredLocation: String,
     @field:SerializedName("company_logo_url")
-    val companyLogoUrl: String?
-)
+    val companyLogoUrl: String?,
+    @field:SerializedName("description")
+    val description: String?,
+    @field:SerializedName("salary")
+    val salary: String?
+) : Parcelable
