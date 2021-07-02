@@ -4,7 +4,7 @@ An android application used to list remote jobs from Remotive (https://remotive.
 
 ## Project Status
 
-This project is currently in development. Users can filter tweets by username and keyword and see visual data representation. Functionality to search, filter using different parameters and  list job details is in progress.
+This project is currently in development. Functionality to search, filter using different parameters and  list job details is in progress.
 
 ## Project Screen Shots
 

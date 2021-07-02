@@ -54,7 +54,7 @@ class CareerDetailsFragment : Fragment(R.layout.fragment_career_details) {
 
             Glide.with(this@CareerDetailsFragment)
                 .load(career.companyLogoUrl)
-                .error(R.drawable.logo)
+                .error(R.drawable.remotivelogo)
                 .into(imageViewCompanyLogo)
 
             textViewJobTitles.text = career.title

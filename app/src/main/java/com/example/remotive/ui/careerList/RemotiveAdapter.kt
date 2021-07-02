@@ -44,7 +44,6 @@ class RemotiveAdapter(private val listener: OnItemClickListener) : PagingDataAda
 
             }
 
-            //RE££""
             binding.root.setOnClickListener {
                 val position = bindingAdapterPosition
                 if (position != RecyclerView.NO_POSITION) {
@@ -66,7 +65,7 @@ class RemotiveAdapter(private val listener: OnItemClickListener) : PagingDataAda
                 Glide.with(itemView)
                     .load(career.companyLogoUrl)
                     .centerCrop()
-                    .error(R.drawable.logo)
+                    .error(R.drawable.remotivelogo)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(imageViewCompanyLogo)
 

@@ -27,12 +27,14 @@
 
         <com.google.android.material.appbar.MaterialToolbar
             android:id="@+id/topBar"
+            style="@style/StatusBarBackground.Remotive"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@color/peach"
+            android:background="@color/status_bar_color"
+            android:elevation="16dp"
             app:menu="@menu/job_details_menu"
             app:navigationIcon="?attr/homeAsUpIndicator"
-            app:navigationIconTint="@color/black">
+            app:navigationIconTint="@color/normal_text_color">
 
             <TextView
                 style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
@@ -41,7 +43,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/job_details"
-                android:textColor="@color/black" />
+                android:textColor="@color/normal_text_color" />
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -75,7 +77,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/company_name"
                 android:textAlignment="center"
-                android:textColor="@color/black"
+                android:textColor="@color/normal_text_color"
                 android:textSize="23sp"
                 tools:text="Snr Data Analyst(Developer)" />
 
@@ -88,7 +90,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/company_name"
                 android:textAlignment="center"
-                android:textColor="@color/link_blue"
+                android:textColor="@color/title_text_color"
                 android:textSize="15sp"
                 tools:text="Google, Worldwide" />
 
@@ -99,7 +101,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/job_overview"
-                android:textColor="@color/link_blue"
+                android:textColor="@color/title_text_color"
                 android:textSize="20sp" />
 
 
@@ -111,7 +113,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/job_overview"
-                android:textColor="@color/black"
+                android:textColor="@color/normal_text_color"
                 android:textSize="15sp"
                 tools:text="-Job type: Full-time" />
 
@@ -123,7 +125,7 @@
                 android:layout_marginTop="5dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/job_overview"
-                android:textColor="@color/black"
+                android:textColor="@color/normal_text_color"
                 android:textSize="15sp"
                 tools:text="-Salary: $50k-$300k USD per year" />
 
@@ -134,7 +136,7 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/description"
-                android:textColor="@color/link_blue"
+                android:textColor="@color/title_text_color"
                 android:textSize="20sp"
                 tools:text="Description" />
 
@@ -147,7 +149,7 @@
                 android:layout_marginEnd="16dp"
                 android:fontFamily="@font/poppins_medium"
                 android:text="@string/job_description"
-                android:textColor="@color/black"
+                android:textColor="@color/normal_text_color"
                 android:textSize="15sp" />
 
             <com.google.android.material.button.MaterialButton
@@ -159,7 +161,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="24dp"
                 android:layout_marginBottom="20dp"
-                android:backgroundTint="@color/link_blue"
+                android:backgroundTint="@color/title_text_color"
                 android:text="@string/apply_now"
                 android:textAllCaps="false"
                 android:textSize="18sp"
