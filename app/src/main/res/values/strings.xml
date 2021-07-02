@@ -33,4 +33,6 @@
     <string name="job_overview">Job Overview</string>
     <string name="apply_now">Apply Now</string>
     <string name="description">Description</string>
+    <string name="browse_remote_jobs">Browse Remote Jobs</string>
+    <string name="browse_for_new_jobs">Browse for new Jobs</string>
 </resources>
