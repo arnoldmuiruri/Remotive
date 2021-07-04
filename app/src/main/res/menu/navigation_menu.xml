@@ -17,9 +17,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:title="@string/bookmark"
+    <item
+        android:id="@+id/list_jobs"
+        android:icon="@drawable/job_list_selector"
+        app:showAsAction="ifRoom"
+        android:title="@string/job_listing"/>
+
+    <item
+        android:id="@+id/bookmarked_jobs"
         android:icon="@drawable/bookmarks_selector"
-        app:showAsAction="always"
-        />
+        app:showAsAction="ifRoom"
+        android:title="@string/saved_jobs"/>
+
+
 
 </menu>

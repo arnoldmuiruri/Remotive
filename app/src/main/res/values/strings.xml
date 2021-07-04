@@ -33,4 +33,7 @@
     <string name="job_overview">Job Overview</string>
     <string name="apply_now">Apply Now</string>
     <string name="description">Description</string>
+    <string name="search">Search</string>
+    <string name="job_listing">Jobs</string>
+    <string name="saved_jobs">Saved Jobs</string>
 </resources>

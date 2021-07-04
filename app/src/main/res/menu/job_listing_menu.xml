@@ -17,9 +17,10 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:title="@string/bookmark"
-        android:icon="@drawable/bookmarks_selector"
-        app:showAsAction="always"
+    <item android:title="@string/search"
+        android:icon="@drawable/ic_baseline_search_24"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView"
         />
 
 </menu>
