@@ -16,5 +16,4 @@
 
 package com.example.remotive.repository
 
-interface CareerRepository {
-}
+interface CareerRepository

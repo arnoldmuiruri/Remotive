@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
+<?xml version="1.0" encoding="utf-8"?>
+<!--
   ~ Copyright (c) 2021 Arnold Muiruri
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -14,19 +15,17 @@
   ~
   -->
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="80dp">
+    android:layout_height="match_parent"
+    android:id="@+id/favoriteListFragment"
+    tools:context=".ui.favoritesList.FavoriteListFragment">
 
+    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/browse_remote_jobs"
-        android:textSize="30sp"
-        android:textColor="@color/normal_text_color"
-        android:textAlignment="center"
-        android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins_medium"
-        />
+        android:text="@string/hello_blank_fragment" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

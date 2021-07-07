@@ -14,21 +14,15 @@
   ~
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/favorites_nav_graph"
+    app:startDestination="@id/favoriteListFragment">
 
-    <item
-        android:id="@+id/home_nav_graph"
-        android:icon="@drawable/job_list_selector"
-        app:showAsAction="ifRoom"
-        android:title="@string/job_listing"/>
-
-    <item
-        android:id="@+id/favorites_nav_graph"
-        android:icon="@drawable/bookmarks_selector"
-        app:showAsAction="ifRoom"
-        android:title="@string/saved_jobs"/>
-
-
-
-</menu>
+    <fragment
+        android:id="@+id/favoriteListFragment"
+        android:name="com.example.remotive.ui.favoritesList.FavoriteListFragment"
+        android:label="fragment_favorite_list"
+        tools:layout="@layout/fragment_favorite_list" />
+</navigation>

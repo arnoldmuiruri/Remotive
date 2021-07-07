@@ -16,13 +16,18 @@
 
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/home_nav_graph"
-    >
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/careerDetails"
+    android:id="@+id/career_details_nav_graph">
 
-    <include app:graph="@navigation/home_nav_graph" />
-    <include app:graph="@navigation/favorites_nav_graph" />
-    <include app:graph="@navigation/career_details_nav_graph"/>
-
+    <fragment
+        android:id="@+id/careerDetails"
+        android:name="com.example.remotive.ui.careerDetails.CareerDetailsFragment"
+        android:label="fragment_career_details"
+        tools:layout="@layout/fragment_career_details">
+        <argument
+            android:name="career"
+            app:argType="com.example.remotive.models.entities.Career" />
+    </fragment>
 
 </navigation>
