@@ -8,7 +8,10 @@ This project is currently in development. Functionality to search, filter using 
 
 ## Project Screen Shots
 
-To be added soon
+![imageedit_8_9418762743](https://user-images.githubusercontent.com/63230403/125426651-3ca1c9d3-b999-4c9f-8438-27184180ea97.png)
+![imageedit_6_8656913803](https://user-images.githubusercontent.com/63230403/125426685-12b8d500-780e-4836-a3d8-1f0cf60ce2fe.png)
+![imageedit_4_5051724529](https://user-images.githubusercontent.com/63230403/125426706-a70ba055-0c93-4edd-a495-f36c19c1e42b.png)
+![imageedit_2_4337472223](https://user-images.githubusercontent.com/63230403/125426727-b1d37056-5036-42a8-851f-b2e51972defa.png)
 
 ## Tech-Stack 
 
