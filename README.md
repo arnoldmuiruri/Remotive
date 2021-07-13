@@ -21,7 +21,7 @@ Jetpack : Room, Lifecycle, ViewModel
 Dagger Hilt
 Glide
 
-##Architecture
+## Architecture
 
 MVVM - Model View View Model
 
