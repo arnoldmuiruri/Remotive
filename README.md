@@ -19,8 +19,11 @@ Kotlin
 Coroutines
 Jetpack : Room, Lifecycle, ViewModel
 Dagger Hilt
+Glide
 
-Architecture: MVVM - Model View View Model
+##Architecture
+
+MVVM - Model View View Model
 
 ## Tests
 Yet to run tests any unit or ui tests
